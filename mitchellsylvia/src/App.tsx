@@ -1,7 +1,8 @@
 import LinkStyles from "./components/Navbar/LinkStyles";
 import Navbar from "./components/Navbar/Navbar";
 import NavLinkData from "./components/Navbar/NavLinkData";
-import "./index.css";
+import Content from "./components/Content/Content";
+import "./App.css";
 
 function App() {
   let pageTabs = {
@@ -14,20 +15,14 @@ function App() {
 
   return (
     <div>
-      <Navbar
-        brandIcon="src/assets/Muse_Icon_White_TransV2.png"
-        brandAlt="An 'M'-shaped logo"
-        pages={pageTabs}
-      />
-      <div className="title">
-        <span className="title">
-          <h2 className="title">Hello, my name is</h2>
-          <h1 className="title">Mitchell Sylvia</h1>
-          <h3 className="gradient-text">
-            &gt; Developer, Engineer, 3D Designer
-          </h3>
-        </span>
+      <div className="nav">
+        <Navbar
+          brandIcon="src/assets/Muse_Icon_White_TransV2.png"
+          brandAlt="An 'M'-shaped logo"
+          pages={pageTabs}
+        />
       </div>
+      {Content()}
     </div>
   );
 }
